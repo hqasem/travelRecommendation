@@ -1,0 +1,248 @@
+/* 🌅 Background for entire site */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: url("sky.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* === NAVIGATION BAR === */
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  z-index: 100;
+  backdrop-filter: blur(6px);
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+.logo span { color: #7fffd4; }
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav a:hover,
+.nav a.active {
+  color: #7fffd4;
+}
+
+/* Search field + buttons */
+.nav-search-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  padding: 2px 4px;
+}
+
+.nav-search {
+  border: none;
+  outline: none;
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #000;
+  width: 160px;
+  background: transparent;
+}
+
+.search-btn,
+.clear-btn {
+  background: #008080;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 8px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+.search-btn:hover { background: #006d6d; }
+.clear-btn {
+  background: #666;
+}
+.clear-btn:hover { background: #444; }
+
+/* === SEARCH RESULTS SECTION === */
+
+/* #searchResultsArea {
+  margin-top: 90px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 40px;
+} */
+#searchResultsArea {
+  position: fixed;
+  top: 90px;
+  right: 20px;
+  z-index: 90;
+}
+
+/* Results appear as a vertical list */
+.results-container {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 20px;
+  width: 400px;
+  overflow-y: auto;
+  color: #000;
+}
+
+/* Card styling */
+.results-container .card {
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+.results-container .card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+.results-container .card-body {
+  padding: 10px;
+}
+
+
+/* Tag label */
+.tag {
+  display: inline-block;
+  background: #008080;
+  color: #fff;
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  margin-top: 6px;
+}
+
+/* === SOCIAL SIDEBAR === */
+.social-sidebar {
+  position: fixed;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px 6px;
+  border-radius: 30px;
+  backdrop-filter: blur(4px);
+}
+
+.social-sidebar a img {
+  width: 22px;
+  height: 22px;
+  opacity: 0.8;
+  filter: invert(100%) brightness(90%);
+  transition: opacity 0.25s, transform 0.25s;
+}
+
+.social-sidebar a:hover img {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+  .nav-search-wrapper {
+    display: none;
+  }
+  .social-sidebar {
+    display: none;
+  }
+}
+/* ✨ Fade-in animation for search results */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.results-container.show {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.results-container .card {
+  opacity: 0;
+  transform: translateY(15px);
+  animation: fadeInUp 0.4s ease forwards;
+}
+
+.results-container .card:nth-child(1) { animation-delay: 0.1s; }
+.results-container .card:nth-child(2) { animation-delay: 0.2s; }
+.results-container .card:nth-child(3) { animation-delay: 0.3s; }
+.results-container .card:nth-child(4) { animation-delay: 0.4s; }
+/* more cards will naturally continue the staggered effect */
+
+.slogo{
+    font-size: 100px;
+    color: white;
+    font-weight: bold;
+    justify-content: space-around;
+
+}
+
+.info{
+    color: white;
+    justify-content: space-around;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 24px;
+
+}
+
+/* About specifics */
+.about-content{max-width:900px}
+.about-text{background:var(--glass);padding:18px;border-radius:8px;margin-top:12px;color:var(--muted)}
+.team{display:flex;gap:18px;margin-top:16px}
+.member{background:var(--glass);padding:12px;border-radius:8px;text-align:center;width:140px}
+.avatar{width:60px;height:60px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:var(--accent-dark);color:#fff;font-weight:700;margin-bottom:8px}
+
+ button {
+    padding: 7px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
