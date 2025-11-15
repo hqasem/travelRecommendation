@@ -1,1 +1,49 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TravelBloom</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">✈️ <span>TravelBloom</span></div>
+    <nav class="nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+
+      <div class="nav-search-wrapper">
+        <input type="text" id="searchInput" placeholder="Search..." class="nav-search" />
+        <button id="searchBtn" class="search-btn">Search</button>
+        <button id="clearBtn" class="clear-btn">Clear</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- 🧭 Search results area below navbar -->
+  <section id="searchResultsArea">
+    <div class="results-container" id="dest"></div>
+    <p id="noResults" style="display:none;">No results found.</p>
+  </section>
+
+  <!-- 🌐 Floating social icons -->
+  <div class="social-sidebar">
+    <a href="#" title="Facebook"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook"></a>
+    <a href="#" title="Instagram"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram"></a>
+    <a href="#" title="Twitter"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="Twitter"></a>
+    <a href="#" title="YouTube"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube"></a>
+  </div>
+
+  <div class="content" style="margin-left: 100px;">
+    <p class="slogo" style="margin-top: 100px;margin-bottom: 0px; width: 300px;">EXPLORE DREAM DESTINATION</p>
+    <p class="info" style="width: 500px;">It encourages exploration of unfamiliar territories, embracing divers cultures and landscapes
+        , while pursuing the desired destination that captivates the heart and ignites a sense of wonder
+    </p>
+    <button id="btnBook" style="margin-top: 16px;">BOOK NOW</button>
+    </div>
+</body>
+</html>
