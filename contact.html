@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    /* Some basic styling for demonstration purposes */
+
+    #contactForm input,
+    #contactForm textarea {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 8px;
+      background-color: transparent;
+      border-color: white;
+      border-radius: 8px;
+    }
+    #contactForm label{
+        color: white;
+    }
+    #contactForm button {
+      padding: 10px 20px;
+      width: 100%;
+      background-color: teal;
+      color: white;
+      border: none; 
+      cursor: pointer;
+    }
+    #contactForm button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">✈️ <span>TravelBloom</span></div>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html" class="active">Contact Us</a>
+    </nav>
+  </header>
+<table style="width: 100%;  left: 40px;margin-left: 100px;">
+  <tr style="width: 100%;">
+    <td>
+
+  <div style="width: auto; margin-top: 20%; float: left; padding: 16px;">
+    <h1 class="slogo">Contact Us</h1>
+    <p class="info">Get in touch.</p>
+</div>
+    </td>
+<td>
+<div style="float: right; margin-top: 20%;padding: 16px;background-color: #0000007c;width: 100%;">
+  <form id="contactForm">
+    <div>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
+    <button type="submit" onclick="thankyou()">Submit</button>
+  </form>
+    </div>
+    </td>
+    </tr>
+</table>
+  <script>
+    function thankyou(){
+        alert('Thank you for contacting us!')
+    }
+  </script>
+
+   <div class="social-sidebar">
+    <a href="#" title="Facebook"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook"></a>
+    <a href="#" title="Instagram"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram"></a>
+    <a href="#" title="Twitter"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="Twitter"></a>
+    <a href="#" title="YouTube"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube"></a>
+  </div>
+</body>
+</html>
